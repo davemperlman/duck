@@ -1,0 +1,198 @@
+// Colors
+$colors: (
+	main: transparent,
+	secondary: #000,
+	tertiary: #479,
+	background: rgba(0,0,0,.05),
+	logo1: #375750,
+	logo2: #a07e59,
+	htext: #444
+	);
+
+// Typography
+$sizes:(
+	h1: 2.5rem,
+	h2: 2.1rem,
+	h3: 1.7rem,
+	h4: 1.5rem,
+	text: 1rem
+	);
+
+// Breaks
+$breaks: (
+	);
+
+// Global 
+body {
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: map-get($sizes, text);
+}
+a {
+	text-decoration: none;
+}
+
+h3 {
+	color: map-get($colors, htext);
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Merriweather Sans';
+}
+
+// Layout
+
+header {
+	overflow: hidden;
+	background-color: #fff;	
+	max-width: 1024px;
+	//padding: 0 1rem;
+	margin: 0 auto;
+	vertical-align: text-bottom;
+	margin-bottom: .5rem;
+	.logo {
+		width: 200px;
+		display: inline-block;
+		margin-left: 1rem;
+	}
+	.description {
+		display: inline-block;
+		//height: 131px;
+		padding: 1rem;
+		position: relative;
+		vertical-align: top;
+		text-align: center;
+		float: right;
+		h1 {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	ul {
+		display: table;
+		float: right;
+		width: 100%;
+		//margin-right: 1rem;
+		li {
+			display: table-cell;
+			line-height: 60px;
+			height: 60px;
+			width: 80px;
+			text-align: center;
+			transition: all .5s;
+			color: #aaa;
+			&:hover {
+				background-color: map-get($colors, logo1);
+				color: #fff;
+			}
+			a {
+				width: 100%;
+				height: 100%;
+				display: block;
+				color: inherit;
+			}
+		}
+	}
+}
+body {
+	background: map-get($colors, background);
+	background: url('../_img/dark_wood.png');
+	
+}
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	background-color: map-get($colors, main);
+	//background-color: #a07e59;
+	padding: 0 1rem;
+}
+
+.banner {
+	background-color: map-get($colors, main);
+	//background-color: #fff;
+	//padding-top: 1rem;
+	margin-bottom: .5rem;
+	img {
+		margin: 0 auto;
+		display: block;
+
+	}
+}
+.carousel {
+	width: 100%;
+	background-color: #fff;
+	padding: 2rem 0;
+	margin-bottom: .5rem;
+	img {
+	}
+}
+.posts {
+	width: 60%;
+	display: inline-block;
+	//margin-top: 1rem;
+	//background-color: #fff;
+	border-top-right-radius: .5rem;
+	border-top-left-radius: .5rem;
+	h3 {
+		margin: 0 auto;
+		padding: .5rem 0;
+		text-align: center;
+		background-color: map-get($colors, logo2);
+		font-size: map-get($sizes, h3);
+		border-top-right-radius: .5rem;
+		border-top-left-radius: .5rem;
+		color: #ddd;
+	}
+	.post {
+		border-bottom: .01rem solid #111;
+		margin-bottom: .5rem;
+		background-color: #fff;
+		padding: 1rem;
+		h4 {
+			text-align: center;
+			margin: 1rem auto;
+			font-size: map-get($sizes, h4);
+			display: block;
+			width: 50%;
+		}
+		p {
+			padding: 1rem;
+		}
+	}
+}
+aside {
+	width: 39%;
+	display: inline-block;
+	//position: relative;
+	float: right;
+	.instagallery {
+		margin-top: .5rem;
+		background-color: #fff;
+		&::before {
+			content: 'Insta';
+		}
+	}		
+	ul {
+		padding: 1rem;
+		background-color: #fff;
+		li {
+			padding: 1rem;
+			text-align: center;
+			border-bottom: .01rem solid #111;
+		}
+	}
+}
+
+footer {
+	background-color: map-get($colors, logo2);
+	margin-top: 1rem;
+	color: #fff;
+	clear: both;
+	ul {
+		text-align: center;
+		li {
+			padding: .5rem;
+		}
+	}
+}
