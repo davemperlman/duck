@@ -1,9 +1,8 @@
 <?php $loop = new WP_Query( array('post_type' => 'event', 'posts_per_page' => 10) ); ?>
-<aside>
-	<!-- <h3>Events</h3> -->
+<aside class="col-sm-5">
 	<!-- Loop of events -->
+	<h3 class="text-center">Upcomming Events</h3>
 	<ul>
-		<h3>Events</h3>
 	<?php if ( $loop->have_posts() ) : ?>
 		<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 			<li>
@@ -14,5 +13,6 @@
 	<?php endif; ?>
 	<?php wp_reset_postdata(); ?>
 	</ul>
+	<hr>
 	<?php echo do_shortcode('[insta-gallery id="1"]'); ?>
 </aside>

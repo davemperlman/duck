@@ -5,9 +5,12 @@ function addStyles() {
 	wp_enqueue_style('template', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('reset', 'http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css');
 	wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+	wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 	wp_enqueue_style('main', get_template_directory_uri() . '/_css/main.css');
+	wp_enqueue_style('font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 	wp_enqueue_style('lora', 'https://fonts.googleapis.com/css?family=Merriweather+Sans');
 	wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+	wp_enqueue_script('bootstrap.js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 }
 add_action('wp_enqueue_scripts', 'addStyles');
 
